@@ -13,8 +13,8 @@
 <p>
 	<strong><%= @user.name %>'s first post</strong><br>
       <tr>
-        <% post =  @user.microposts.first %>
-        <td><%= post.content %> - <strong>Created at: </strong><%= post.created_at %></td><br>
+        <% @post =  @user.microposts.first %>
+        <td><%= @post.content %> - <strong>Created at: </strong><%= @post.created_at %></td><br>
       </tr>
 </p>
 
