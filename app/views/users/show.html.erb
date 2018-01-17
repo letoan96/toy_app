@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+	<strong><%= @user.name %>'s first post</strong><br>
+      <tr>
+        <% post =  @user.microposts.first %>
+        <td><%= post.content %> - <strong>Created at: </strong><%= post.created_at %></td><br>
+      </tr>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
