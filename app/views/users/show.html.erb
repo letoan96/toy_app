@@ -13,8 +13,12 @@
 <p>
 	<strong><%= @user.name %>'s first post</strong><br>
       <tr>
-        <% @post =  @user.microposts.first %>
+      <% @post =  @user.microposts.first %>
+      	<% if @post %>
         <td><%= @post.content %> - <strong>Created at: </strong><%= @post.created_at %></td><br>
+        <% else %>
+        <td>This user has no post</td>
+        <% end %>
       </tr>
 </p>
 
